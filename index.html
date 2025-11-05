@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gator Hoops</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAA..."> <!-- optional tiny icon -->
+</head>
+<body>
+  <header>
+    <h1>Gator Hoops</h1>
+    <div class="controls">
+      <label>
+        Team:
+        <select id="gender">
+          <option value="mens-college-basketball" selected>Men's</option>
+          <option value="womens-college-basketball">Women's</option>
+        </select>
+      </label>
+      <button id="refreshBtn" title="Refresh data">↻ Refresh</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="schedule">Schedule</button>
+    <button class="tab" data-tab="roster">Roster</button>
+  </nav>
+
+  <main>
+    <section id="schedule" class="tab-panel active">
+      <div id="scheduleList" class="card-list"></div>
+    </section>
+
+    <section id="roster" class="tab-panel">
+      <div id="rosterList" class="card-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Data from ESPN public JSON. Not affiliated with UF.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
